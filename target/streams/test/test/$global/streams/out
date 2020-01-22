@@ -1,0 +1,2 @@
+[0m[[0m[0mdebug[0m] [0m[0mjavaOptions: Vector(-Xms512M, -Xmx2048M, -XX:MaxPermSize=2048M, -XX:+CMSClassUnloadingEnabled)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForking tests - parallelism = false[0m

@@ -1,0 +1,25 @@
+resolvers += "Spark Packages Repo" at "http://dl.bintray.com/spark-packages/maven"
+
+name := "Json_Reader_Oleinikov(2)"
+
+version := "0.0.1"
+
+scalaVersion := "2.11.12"
+
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.4.4" % "provided"
+
+libraryDependencies += "org.json4s" %% "json4s-jackson" % "3.2.11"
+
+// test suite settings
+fork in Test := true
+javaOptions ++= Seq("-Xms512M", "-Xmx2048M", "-XX:MaxPermSize=2048M", "-XX:+CMSClassUnloadingEnabled")
+// Show runtime of tests
+testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oD")
+
+// JAR file settings
+
+// don't include Scala in the JAR file
+//assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false)
+
+// Add the JAR file naming conventions described here: https://github.com/MrPowers/spark-style-guide#jar-files
+// You can add the JAR file naming conventions by running the shell script
